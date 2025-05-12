@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class PrimitiveStreamMain {
     public static void main(String[] args) {
-        
+
         // 기본형 특화 스트림 생성(IntStream, LongStream, DoubleStream)
         IntStream stream = IntStream.of(1, 2, 3, 4, 5);
         stream.forEach(i -> System.out.print(i + " "));
