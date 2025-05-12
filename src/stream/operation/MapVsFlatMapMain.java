@@ -24,9 +24,16 @@ public class MapVsFlatMapMain {
         System.out.println(forResult);
 
         // map
-        List<Integer> mapList = outerList.stream()
-                .flatMap(Collection::stream)
+        List<Stream<Integer>> mapList = outerList.stream()
+                .map(Collection::stream)
                 .toList();
         System.out.println("mapList = " + mapList);
+
+        List<Integer> flatMapList = outerList.stream()
+                .flatMap(Collection::stream)
+                .toList();
+        System.out.println("flatMapList = " + flatMapList);
+
+
     }
 }
